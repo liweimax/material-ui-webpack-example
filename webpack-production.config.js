@@ -8,6 +8,7 @@ const config = {
       './src/app/app.js',
     ],
   },
+   mode: "production",
   // Render source-map file for final build
   devtool: 'source-map',
   // output config
@@ -22,10 +23,7 @@ const config = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-    // Minify the bundle
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-    }),
+
     // Transfer Files
     new TransferWebpackPlugin([
       {from: 'www'},
@@ -40,6 +38,7 @@ const config = {
         query: {
           cacheDirectory: true,
         },
+
       },
     ],
   },

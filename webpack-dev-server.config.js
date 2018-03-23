@@ -11,6 +11,7 @@ const config = {
       './src/app/app.js',
     ],
   },
+  mode: "development",
   // Server Configuration options
   devServer: {
     contentBase: 'src/www', // Relative directory for base of server
