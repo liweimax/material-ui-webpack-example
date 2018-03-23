@@ -9,6 +9,7 @@ import {deepOrange500} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import WelcomeList from './Welcome.jsx'
 
 const styles = {
   container: {
@@ -62,7 +63,8 @@ class Main extends Component {
             actions={standardActions}
             onRequestClose={this.handleRequestClose}
           >
-            1-2-3-4-5
+           <WelcomeList/>
+           
           </Dialog>
           <h1>Material-UI</h1>
           <h2>example project</h2>
@@ -72,6 +74,7 @@ class Main extends Component {
             onTouchTap={this.handleTouchTap}
           />
         </div>
+        
       </MuiThemeProvider>
     );
   }

@@ -18,7 +18,7 @@ const config = {
     hot: true, // Live-reload
     inline: true,
     port: 3000, // Port Number
-    host: 'localhost', // Change to '0.0.0.0' for external facing server
+    host: '0.0.0.0', // Change to '0.0.0.0' for external facing server
   },
   devtool: 'eval',
   output: {
@@ -43,6 +43,28 @@ const config = {
           cacheDirectory: true,
         },
       },
+      {
+        test: /\.jsx?$/,  
+        exclude: /(node_modules|bower_components)/,  
+        loader: 'babel-loader',   
+        query: {  
+          cacheDirectory: true, 
+        }
+      }, 
+      { 
+        test: /\.css$/, 
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.less$/,
+        use: [{
+               loader: "style-loader" 
+            }, {
+                loader: "css-loader" 
+            }, {
+                loader: "less-loader"
+            }]
+      }
     ],
   },
 };
