@@ -51,7 +51,9 @@ class SimpleTabs extends React.Component {
         {value === 0 && <TabContainer>
           <StartTools />       
         </TabContainer>}
-        {value === 1 && <TabContainer>Item Two</TabContainer>}
+        {value === 1 && <TabContainer>
+          <StartTools />  
+        </TabContainer>}
         {value === 2 && <TabContainer>Item Three</TabContainer>}
       </div>
     );

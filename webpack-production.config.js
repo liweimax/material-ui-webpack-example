@@ -16,6 +16,10 @@ const config = {
     path: path.resolve(__dirname, 'build'), // Path of output file
     filename: 'app.js', // Name of output file
   },
+  resolve: {
+    //modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
+    extensions: ['.jsx', '.js', '.json'],
+  },
   plugins: [
     // Define production build to allow React to strip out unnecessary checks
     new webpack.DefinePlugin({
@@ -27,7 +31,7 @@ const config = {
     // Transfer Files
     new TransferWebpackPlugin([
       {from: 'www'},
-    ], path.resolve(__dirname, 'src')),
+    ], path.resolve(__dirname, '.')),
   ],
   module: {
     rules: [

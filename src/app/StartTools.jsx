@@ -13,13 +13,9 @@ import Tooltip from 'material-ui/Tooltip';
 
 const styles = theme => ({
   button: {
-    margin: theme.spacing.unit
-  },
-  leftIcon: {
-    marginRight: theme.spacing.unit,
-  },
-  iconSmall: {
-    fontSize: 20,
+    margin: theme.spacing.unit,
+    width:24,
+    height:24
   },
   input: {
     display: "none"
@@ -30,13 +26,6 @@ function StartTools(props) {
   const { classes } = props;
   return (
     <div>
-
-      <Tooltip id="tooltip-icon" title="Save">
-        <Button className={classes.button} variant="raised" size="small">
-          <Save className={classNames(classes.leftIcon, classes.iconSmall)} />
-          Save
-        </Button>
-      </Tooltip>
     
       <IconButton className={classes.button} aria-label="Delete">
         <DeleteIcon />
