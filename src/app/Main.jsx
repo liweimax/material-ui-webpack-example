@@ -7,16 +7,27 @@ import CustomizedTable from './CustomizedTable';
 import StatusBar from './StatusBar';
 import ViewArea from './ViewArea'
 
-function Main(props) {
+const styles = theme => ({
+    main: {
+        height:'100%',
+        position:'relative'
+    }
+});
 
+function Main(props) {
+    const { classes } = props;
     return (
-        <div>
+        <div className={classes.main}>
             <SimpleTabs />
             <ViewArea/>
             <StatusBar/>
         </div>
   );
 }
-           //<CustomizedTable />
-export default Main;
+
+Main.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
+
+export default withStyles(styles)(Main);
 

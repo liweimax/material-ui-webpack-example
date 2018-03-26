@@ -20,7 +20,6 @@ TabContainer.propTypes = {
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
     marginTop: 0,
     backgroundColor: theme.palette.background.paper,
   },
@@ -43,9 +42,9 @@ class SimpleTabs extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs value={value} onChange={this.handleChange}>
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" href="#basic-tabs" />
+            <Tab label="Home" href="#one"/>
+            <Tab label="Tool" href="#two"/>
+            <Tab label="PlugIn" href="#three" />
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer>

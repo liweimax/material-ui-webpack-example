@@ -5,8 +5,9 @@ import { withStyles } from 'material-ui/styles';
 const styles = theme => ({
     viewArea: {
         backgroundColor: theme.palette.common.black,
-        height: '100%',
         width:'100%',
+        bottom:20,
+        top:88,
         position:'absolute'
     }
 });

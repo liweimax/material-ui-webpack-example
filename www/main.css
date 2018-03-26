@@ -1,8 +1,10 @@
-html {
+html,body {
   font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  margin: 0;
+  height: 100%;
 }
 
-body {
-  font-size: 13px;
-  line-height: 20px;
+#app{
+  height: 100%;
 }

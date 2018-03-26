@@ -1,44 +1,47 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 
 const styles = theme => ({
-  button: {
-    margin: theme.spacing.unit,
-  },
   statusBar:{
-    //bottom:0,
-    //position: 'absolute',
+    bottom:0,
+    height:20,
+    width:'100%',
+    position: 'absolute',
     //height: 60,
-    backgroundColor: theme.palette.common.white,
-  }
+    paddingTop:5,
+    backgroundColor: '#002884',
+    color: theme.palette.common.white,
+    
+  },
 });
 
-function doSomething(event) {
-  // eslint-disable-next-line no-console
-  console.log(event.currentTarget.getAttribute('data-something'));
-}
 
-function StatusBar(props) {
-  const { classes } = props;
-  return (
-    <div className={classes.statusBar}>
-      <Button className={classes.button}>Default</Button>
-      <Button color="primary" className={classes.button}>
-        Primary
-      </Button>
-      <Button color="secondary" className={classes.button}>
-        Secondary
-      </Button>
-      <Button disabled className={classes.button}>
-        Disabled
-      </Button>
-      <Button href="#flat-buttons" className={classes.button}>
-        Link
-      </Button>
-    </div>
-  );
+class StatusBar extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			name:'HELLO LIWEI.MA',
+			x: '12342.23',
+			y:'34234.33',
+			unit:'mm'
+    };
+  }
+
+  render() {
+    const { classes } = this.props;
+    return (
+      
+      <div className={classes.statusBar}>
+        <span style={{paddingLeft:10}}> {this.state.name}</span>
+        <div style={{float: 'right', paddingRight:10}}>
+          <span className='status-span-right'>| UNIT: {this.state.unit}</span>
+          <span className='status-span-right'>  | POSITION: {this.state.x}, {this.state.y}</span>
+        </div>
+      </div>
+    );
+  }
 }
 
 StatusBar.propTypes = {
@@ -47,3 +50,4 @@ StatusBar.propTypes = {
 
 export default withStyles(styles)(StatusBar);
 
+//export default StatusBar
