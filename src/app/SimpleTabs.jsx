@@ -42,9 +42,9 @@ class SimpleTabs extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs value={value} onChange={this.handleChange}>
-            <Tab label="Home" href="#one"/>
-            <Tab label="Tool" href="#two"/>
-            <Tab label="PlugIn" href="#three" />
+            <Tab label="Home"/>
+            <Tab label="Tool"/>
+            <Tab label="PlugIn"/>
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer>

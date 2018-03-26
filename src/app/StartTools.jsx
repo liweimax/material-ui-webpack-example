@@ -10,6 +10,7 @@ import Button from 'material-ui/Button';
 import Save from 'material-ui-icons/Save';
 import classNames from 'classnames';
 import Tooltip from 'material-ui/Tooltip';
+import OpenFileButton from '../buttons/OpenFileButton';
 
 const styles = theme => ({
   button: {
@@ -26,7 +27,6 @@ function StartTools(props) {
   const { classes } = props;
   return (
     <div>
-    
       <IconButton className={classes.button} aria-label="Delete">
         <DeleteIcon />
       </IconButton>
@@ -52,6 +52,9 @@ function StartTools(props) {
       >
         <AddShoppingCartIcon />
       </IconButton>
+
+       <OpenFileButton className={classes.button}/>
+
       <input
         accept="image/*"
         className={classes.input}
@@ -63,6 +66,7 @@ function StartTools(props) {
           <PhotoCamera> Camera </PhotoCamera>
         </IconButton>
       </label>
+
     </div>
   );
 }
